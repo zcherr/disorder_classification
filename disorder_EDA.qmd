@@ -1,60 +1,299 @@
 ---
-title: "Mental Disorder Classification EDA and Data Cleaning"
-format: html
+title: "Mental Disorder Classification: EDA and Data Cleaning"
+author: "Zachary Cherry"
+published: "August 11, 2024"
+format: 
+  html:
+    toc: true
+    toc-title: "Table of Contents"
+    toc-depth: 5
 editor: visual
 ---
 
+# Notes
+
+This R script is designed to clean and examine the data before loading it into a Python (Jupyter Notebook) environment. The goal is to prepare the data for creating a neural network model that can determine an individual's diagnosed disorder based on their symptoms. The script performs essential steps including reading the data, renaming variables, converting variable types, and conducting exploratory data analysis (EDA) to ensure the dataset is clean and ready for modeling.
+
 # Setup
 
-```{r}
-#| include: false
+## Load Custom Functions and Set Options
 
-options(conflicts.policy = "depends.ok",
-        digits.secs = 6,
+Set conflict policies to reduce errors associated with function conflicts and load custom functions for EDA.
+
+```{r}
+#| output: false
+source("functions.R") # Loading custom functions for EDA 
+
+options(conflicts.policy = "depends.ok", # Deals with package conflicts
         dplyr.print_max=Inf)
 
-library(tidyverse) 
+tidymodels_conflictRules() # Deals with package conflicts
+```
+
+## Load Required Packages
+
+Load all packages needed for this project.
+
+```{r}
+#| output: false
+knitr::opts_chunk$set(warning = FALSE)
+
+library(tidyverse)
+library(tidymodels)
+library(knitr)
 library(kableExtra, exclude = c("group_rows"))
-
-theme_set(theme_classic())
+library(cowplot, include.only = c("plot_grid", "theme_half_open"))
+library(corrplot, include.only = "corrplot.mixed")
 ```
 
-## Custom Functions
+## Setup Enviroment
+
+Set up some other environment settings
 
 ```{r}
-
+#| output: false
+options(tibble.width = Inf, tibble.print_max = Inf)
+theme_set(theme_classic()) 
 ```
 
-## Read in Data
+# Read and Setup Dataframe
 
-### Disorder Classification
+## Read Data
+
+Read in the data and perform initial cleaning steps. Call here::here() to set your root path to be inside of the folder.
 
 ```{r}
-
+diagnose_all <- read_csv(here::here("disorder_classification.csv"), 
+                     col_types = cols()) |> 
+  janitor::clean_names() |> 
+  mutate(across(where(is.character), str_to_lower)) |>
+  glimpse()
 ```
 
-# EDA
+## Rename Variables
+
+Rename variables for better legibility and consistency. Change 'normal' to 'no diagnosis'.
 
 ```{r}
+diagnose_all <- diagnose_all |> 
+  rename(diagnosis = expert_diagnose,
+         subid = patient_number)
 
+diagnose_all <- diagnose_all |> 
+  mutate(diagnosis = ifelse(diagnosis == "normal", 
+                            "no diagnosis", diagnosis))
 ```
 
+# Cleaning EDA
 
-# Save Out Data
+This section focuses on EDA steps necessary for cleaning the full dataset. Be mindful of which aspects of the dataset you explore at this stage to prevent information leakage between later training and validation sets.
 
-## Training Data
+## Explore Variables
+
+Explore the dataset to understand its structure and check for any anomalies.
 
 ```{r}
-
+diagnose_all |> 
+  skim_all() 
 ```
 
-## Test Data
+**Variable class notes:** *All variables are either of type character or of type numeric. We will think more carefully about the factors, etc., in the EDA modeling script. All variables are read in as expected, including the character variables since earlier we set the factor variables to character. We can also note that there are no missing values.*
+
+## Numeric Variables
+
+Examine the range and distribution of numeric variables.
 
 ```{r}
+diagnose_all |>
+  skim_some() |> 
+  filter(skim_type == "numeric") |> 
+  select(skim_variable, numeric.p0, numeric.p100)
+```
+
+**Numeric variable notes:** *Numeric values appear to be in the expected range. There were no numeric values that make sense to convert to factor variables to examine min/max values. These numeric variables were originally scored on a range from 1-10, so this result makes sense.*
+
+## Categorical Variables
+
+### Set Categorical levels
+
+Convert specific columns into categorical factors with defined levels.
+
+```{r}
+feeling_levels <- function(df, columns, levels) {
+  df <- df |> 
+    mutate(across(all_of(columns), ~ factor(.x, levels = levels)))
+  return(df)
+}
+
+columns_feeling <- c("sadness", "euphoric", 
+                     "exhausted", "sleep_dissorder")
+
+factor_levels <- c("most-often", "usually", 
+                   "sometimes", "seldom")
+
+diagnose_all <- feeling_levels(diagnose_all,
+                               columns_feeling, 
+                               factor_levels)
+```
+
+Convert specified columns into categorical factors with "yes" and "no" values.
+
+```{r}
+convert_to_yesno <- function(df, columns) {
+  for (col in columns) {
+    if (col %in% names(df)) {
+      df[[col]] <- factor(df[[col]], levels = c("yes", "no"))
+    } else {
+      warning(paste("Column", col, "not found in the dataframe."))
+    }
+  }
+  return(df)
+}
+
+columns_yesno <- c("mood_swing", "suicidal_thoughts", "anorexia", 
+                   "authority_respect", "try_explain", 
+                   "aggressive_response", "ignore_move_on", 
+                   "nervous_break_down", "admit_mistakes", 
+                   "overthinking")
+
+diagnose_all <- convert_to_yesno(diagnose_all, columns_yesno)
+```
+
+### Examine Variable Levels
+
+Print the levels of each categorical variable to confirm proper levels.
+
+```{r}
+diagnose_all |>
+  select(where(is.factor)) |>
+  names() |>
+  walk(~ {
+    column <- diagnose_all[[.x]]
+    cat("Variable:", .x, "\n")
+    print(levels(column))
+    cat("\n")
+  })
+```
+
+# Modeling EDA
+
+## Univariate Distributions
+
+### Numeric Variables
+
+Examine the distributions of numeric variables using box and violin plots.
+
+```{r}
+diagnose_all |> 
+  select(where(is.numeric)) |> 
+  names() |> 
+  map(\(name) plot_box_violin(df = diagnose_all, x = name)) |> 
+  plot_grid(plotlist = _, ncol = 2)
+```
+
+Summary statistics for numeric variables.
+
+```{r}
+diagnose_all |>
+  skim_all() |> 
+  filter(skim_type == "numeric")
+```
+
+**Numeric Univariate Notes:** *Sexual Activity, Concentration, and Optimism exhibit minimal skew, indicating nearly symmetric distributions. Sexual Activity has a skew of approximately 0.11, while Concentration shows a slightly higher skew of around 0.18, indicating a near-symmetric distribution with slightly lower average scores. Optimism shows a skew of 0.17, suggesting a slight right skew with a mean score of 4.39.*
+
+### Categorical Variables
+
+Examine the distributions of categorical variables using bar plots.
+
+```{r}
+diagnose_all|> 
+  select(sadness, euphoric, 
+         exhausted, sleep_dissorder, diagnosis) |> 
+  names() |> 
+  map(\(name) plot_bar(df = diagnose_all, x = name)) |> 
+  plot_grid(plotlist = _, ncol = 3) 
+```
+
+**Univariate categorical variable notes:** *Each variable exhibits an evenly spread response category across the majority of these variables, reflecting that certain responses are not chosen more frequently by respondents. Conversely, the diagnosis variable displays a balanced distribution across its categories. These patterns highlight general trends in how respondents report their experiences and conditions related to these variables.*
+
+## Bivariate Distributions
+
+#### Categorical Variables
+
+Transform binary variables into a long format for easier analysis of yes/no values.
+
+```{r, echo=TRUE, results='hide'}
+diagnose_long <- diagnose_all |> 
+  select(all_of(columns_yesno), diagnosis) |> 
+  pivot_longer(cols = all_of(columns_yesno), 
+               names_to = "variable", 
+               values_to = "response")
+```
+
+```{r}
+plot_data <- diagnose_long |> 
+  group_by(variable, diagnosis, response) |> 
+  summarise(count = n(), .groups = 'drop') |> 
+  group_by(variable, diagnosis) |> 
+  mutate(prop = count / sum(count))
+
+ggplot(plot_data, aes(x = prop, y = variable, fill = response)) +
+  geom_bar(stat = "identity") +
+  facet_wrap(~ diagnosis, ncol = 4) + 
+  labs(x = NULL, y = NULL, fill = "Response") + 
+  theme_minimal() +
+  theme(axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.x = element_text(angle = 45, hjust = 1),  
+        axis.text.y = element_text(size = 10),
+        strip.text = element_text(size = 10)) 
 
 ```
 
+**Bivariate categorical variable notes:** *The distributions of responses across the four different disorders—bipolar type-1, bipolar type-2, depression, and no diagnosis—show a generally uniform pattern with a few exceptions. For most variables, responses are split between "yes" and "no" across the disorders, indicating a varying reporting of symptoms and behaviors. However, some variables, such as mood_swing under bipolar type-2 and depression, have only one response recorded, possibly due to limited data for these conditions, or a lack of variability.*
 
+#### Correlations
 
+```{r}
+# Define the mappings 
+# These are changed temporarily to examine correlations of the focal variable
+survey_mapping <- c('most-often' = 0, 'usually' = 1, 'sometimes' = 2, 'seldom' = 3)
 
+diagnosis_mapping <- c('no diagnosis' = 0, 
+                       'depression' = 1, 
+                       'bipolar type-1' = 2, 
+                       'bipolar type-2' = 3)
 
+# Compute the correlation matrix with the mappings applied
+cor_matrix <- diagnose_all |>
+  mutate(across(6:15, ~ ifelse(. == "yes", 0, 1))) |>
+  mutate(across(everything(), ~ ifelse(. %in% names(survey_mapping), 
+                                        survey_mapping[.], 
+                                        .))) |>
+  mutate(diagnosis = as.numeric(factor(diagnosis, 
+                                       levels = names(diagnosis_mapping), 
+                                       labels = diagnosis_mapping))) |>
+  select(where(is.numeric)) |>
+  cor(use = "pairwise.complete.obs")
+```
+
+```{r}
+corrplot::corrplot(cor_matrix, 
+         type = "lower",          
+         method = "color",   
+         tl.col = "black",  
+         tl.srt = 45,      
+         tl.cex = 0.7,     
+         number.cex = 0.5,     
+         addCoef.col = "black",
+         diag = FALSE)
+```
+
+**Correlation notes:** *The diagnosis variable shows overall moderate correlations with other numeric variables, with both positive and negative associations. This suggests a varied relationship between the diagnosis and the other symptoms measured.*
+
+# Save Cleaned Data
+
+```{r}
+diagnose_all |> 
+  write_csv(here::here("clean_data.csv"))
+```
