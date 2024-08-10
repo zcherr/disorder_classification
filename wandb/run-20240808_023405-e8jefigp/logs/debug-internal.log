@@ -1,0 +1,806 @@
+2024-08-08 02:34:05,138 INFO    StreamThr :8844 [internal.py:wandb_internal():85] W&B internal server running at pid: 8844, started at: 2024-08-08 02:34:05.137921
+2024-08-08 02:34:05,139 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: status
+2024-08-08 02:34:05,151 INFO    WriterThread:8844 [datastore.py:open_for_write():87] open: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\run-e8jefigp.wandb
+2024-08-08 02:34:05,151 DEBUG   SenderThread:8844 [sender.py:send():379] send: header
+2024-08-08 02:34:05,151 DEBUG   SenderThread:8844 [sender.py:send():379] send: run
+2024-08-08 02:34:05,450 INFO    SenderThread:8844 [dir_watcher.py:__init__():211] watching files in: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files
+2024-08-08 02:34:05,450 INFO    SenderThread:8844 [sender.py:_start_run_threads():1188] run started: e8jefigp with start time 1723102445.137921
+2024-08-08 02:34:05,456 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: check_version
+2024-08-08 02:34:05,456 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: check_version
+2024-08-08 02:34:05,605 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: run_start
+2024-08-08 02:34:06,516 DEBUG   HandlerThread:8844 [system_info.py:__init__():26] System info init
+2024-08-08 02:34:06,516 DEBUG   HandlerThread:8844 [system_info.py:__init__():41] System info init done
+2024-08-08 02:34:06,516 INFO    HandlerThread:8844 [system_monitor.py:start():194] Starting system monitor
+2024-08-08 02:34:06,516 INFO    SystemMonitor:8844 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-08 02:34:06,516 INFO    HandlerThread:8844 [system_monitor.py:probe():214] Collecting system info
+2024-08-08 02:34:06,516 INFO    SystemMonitor:8844 [interfaces.py:start():188] Started cpu monitoring
+2024-08-08 02:34:06,516 INFO    SystemMonitor:8844 [interfaces.py:start():188] Started disk monitoring
+2024-08-08 02:34:06,516 INFO    SystemMonitor:8844 [interfaces.py:start():188] Started gpu monitoring
+2024-08-08 02:34:06,516 INFO    SystemMonitor:8844 [interfaces.py:start():188] Started memory monitoring
+2024-08-08 02:34:06,522 INFO    SystemMonitor:8844 [interfaces.py:start():188] Started network monitoring
+2024-08-08 02:34:06,532 DEBUG   HandlerThread:8844 [system_info.py:probe():152] Probing system
+2024-08-08 02:34:06,532 DEBUG   HandlerThread:8844 [gitlib.py:_init_repo():56] git repository is invalid
+2024-08-08 02:34:06,532 DEBUG   HandlerThread:8844 [system_info.py:probe():200] Probing system done
+2024-08-08 02:34:06,532 DEBUG   HandlerThread:8844 [system_monitor.py:probe():223] {'os': 'Windows-11-10.0.22631-SP0', 'python': '3.12.4', 'heartbeatAt': '2024-08-08T07:34:06.532774', 'startedAt': '2024-08-08T07:34:05.122917', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'disorder_NN.ipynb', 'codePathLocal': 'disorder_NN.ipynb', 'host': 'Vera', 'username': 'cherr', 'executable': 'c:\\Users\\cherr\\miniconda3\\python.exe', 'cpu_count': 10, 'cpu_count_logical': 16, 'cpu_freq': {'current': 2400.0, 'min': 0.0, 'max': 2400.0}, 'cpu_freq_per_core': [{'current': 2400.0, 'min': 0.0, 'max': 2400.0}], 'disk': {}, 'gpu': 'NVIDIA GeForce RTX 3050 6GB Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3050 6GB Laptop GPU', 'memory_total': 6442450944}], 'memory': {'total': 15.635322570800781}}
+2024-08-08 02:34:06,532 INFO    HandlerThread:8844 [system_monitor.py:probe():224] Finished collecting system info
+2024-08-08 02:34:06,532 INFO    HandlerThread:8844 [system_monitor.py:probe():227] Publishing system info
+2024-08-08 02:34:06,532 DEBUG   HandlerThread:8844 [system_info.py:_save_conda():209] Saving list of conda packages installed into the current environment
+2024-08-08 02:34:07,473 INFO    Thread-16 :8844 [dir_watcher.py:_on_file_created():271] file/dir created: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\conda-environment.yaml
+2024-08-08 02:34:08,554 ERROR   gpu       :8844 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-08-08 02:34:08,554 ERROR   gpu       :8844 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-08-08 02:34:11,273 ERROR   gpu       :8844 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-08-08 02:34:11,273 ERROR   gpu       :8844 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-08-08 02:34:13,372 DEBUG   HandlerThread:8844 [system_info.py:_save_conda():224] Saving conda packages done
+2024-08-08 02:34:13,374 INFO    HandlerThread:8844 [system_monitor.py:probe():229] Finished publishing system info
+2024-08-08 02:34:13,374 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: status_report
+2024-08-08 02:34:13,374 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: keepalive
+2024-08-08 02:34:13,374 DEBUG   SenderThread:8844 [sender.py:send():379] send: files
+2024-08-08 02:34:13,374 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-08-08 02:34:13,500 INFO    Thread-16 :8844 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\conda-environment.yaml
+2024-08-08 02:34:13,501 INFO    Thread-16 :8844 [dir_watcher.py:_on_file_created():271] file/dir created: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\wandb-metadata.json
+2024-08-08 02:34:13,608 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: python_packages
+2024-08-08 02:34:13,608 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: python_packages
+2024-08-08 02:34:13,608 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-08 02:34:13,608 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: stop_status
+2024-08-08 02:34:13,608 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 02:34:13,703 DEBUG   SenderThread:8844 [sender.py:send():379] send: telemetry
+2024-08-08 02:34:13,703 DEBUG   SenderThread:8844 [sender.py:send():379] send: telemetry
+2024-08-08 02:34:13,703 DEBUG   SenderThread:8844 [sender.py:send():379] send: telemetry
+2024-08-08 02:34:13,703 DEBUG   SenderThread:8844 [sender.py:send():379] send: metric
+2024-08-08 02:34:13,703 DEBUG   SenderThread:8844 [sender.py:send():379] send: metric
+2024-08-08 02:34:13,703 WARNING SenderThread:8844 [sender.py:send_metric():1405] Seen metric with glob (shouldn't happen)
+2024-08-08 02:34:13,806 INFO    wandb-upload_0:8844 [upload_job.py:push():130] Uploaded file C:\Users\cherr\AppData\Local\Temp\tmpux8zuqdiwandb\96pdln1t-wandb-metadata.json
+2024-08-08 02:34:13,988 ERROR   gpu       :8844 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-08-08 02:34:13,988 ERROR   gpu       :8844 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-08-08 02:34:14,292 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,292 DEBUG   SenderThread:8844 [sender.py:send():379] send: metric
+2024-08-08 02:34:14,294 DEBUG   SenderThread:8844 [sender.py:send():379] send: metric
+2024-08-08 02:34:14,294 DEBUG   SenderThread:8844 [sender.py:send():379] send: metric
+2024-08-08 02:34:14,294 DEBUG   SenderThread:8844 [sender.py:send():379] send: metric
+2024-08-08 02:34:14,294 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,294 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,294 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,320 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,320 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,320 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,320 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,356 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,356 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,356 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,356 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,391 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,393 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,393 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,393 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,424 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,424 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,424 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,424 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,460 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,461 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,461 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,461 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,513 INFO    Thread-16 :8844 [dir_watcher.py:_on_file_created():271] file/dir created: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\wandb-summary.json
+2024-08-08 02:34:14,513 INFO    Thread-16 :8844 [dir_watcher.py:_on_file_created():271] file/dir created: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\requirements.txt
+2024-08-08 02:34:14,549 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,549 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,549 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,549 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,596 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,596 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,596 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,596 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,622 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 02:34:14,642 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,642 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,642 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,642 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,689 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,689 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,689 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,689 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,726 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,726 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,726 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,726 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,773 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,774 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,774 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,774 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,817 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,817 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,817 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,817 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,849 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,849 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,849 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,849 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,891 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,891 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,891 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,891 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,926 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,926 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,926 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,926 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,954 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,954 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,954 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,954 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:14,990 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:14,991 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:14,991 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:14,991 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,023 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,023 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,023 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,023 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,056 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,056 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,056 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,056 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,090 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,090 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,090 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,091 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,119 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,119 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,119 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,119 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,149 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,149 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,149 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,149 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,180 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,180 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,180 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,180 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,212 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,212 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,212 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,212 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,239 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,239 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,239 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,239 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,272 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,272 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,272 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,272 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,307 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,307 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,307 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,307 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,323 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,323 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,339 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,339 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,356 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,356 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,371 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,371 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,390 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,390 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,390 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,390 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,424 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,424 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,424 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,424 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,461 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,461 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,461 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,461 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,489 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,489 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,489 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,489 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,519 INFO    Thread-16 :8844 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\wandb-summary.json
+2024-08-08 02:34:15,524 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,524 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,524 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,524 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,556 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,556 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,556 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,556 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,589 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,589 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,589 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,589 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,619 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,619 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,619 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,619 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,624 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 02:34:15,644 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,644 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,644 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,644 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: status_report
+2024-08-08 02:34:15,644 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,675 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,675 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,675 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,675 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,702 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,702 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,702 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,702 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,741 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,741 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,741 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,741 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,773 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,773 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,773 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,773 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,809 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,809 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,809 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,809 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,841 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,841 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,841 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,841 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,857 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,857 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,873 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,873 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,889 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,889 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,889 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,889 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,925 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,925 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,925 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,925 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,963 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,963 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,963 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,963 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:15,990 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:15,990 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:15,990 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:15,990 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,021 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,021 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,021 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,021 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,058 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,058 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,058 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,058 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,093 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,093 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,093 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,093 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,120 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,120 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,120 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,120 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,152 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,152 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,152 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,152 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,190 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,190 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,190 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,190 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,222 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,222 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,222 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,222 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,257 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,257 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,257 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,257 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,274 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,274 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,274 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,274 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,321 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,321 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,321 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,321 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,353 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,353 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,353 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,353 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,385 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,385 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,385 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,385 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,407 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,407 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,407 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,407 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,439 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,439 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,439 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,439 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,474 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,474 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,474 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,474 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,511 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,511 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,511 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,511 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,523 INFO    Thread-16 :8844 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\wandb-summary.json
+2024-08-08 02:34:16,538 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,538 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,538 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,538 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,573 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,573 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,573 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,573 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,607 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,607 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,607 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,607 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,639 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 02:34:16,709 ERROR   gpu       :8844 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-08-08 02:34:16,709 ERROR   gpu       :8844 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-08-08 02:34:16,710 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,710 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,710 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,713 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,773 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,773 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,773 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,773 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,808 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,808 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,808 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,808 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,841 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,841 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,841 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,843 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,873 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,873 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,873 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,873 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,903 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,906 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,906 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,906 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,927 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,927 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,927 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,939 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,955 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,955 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,955 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:16,955 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:16,986 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:16,986 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:16,986 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,002 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,018 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,033 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,033 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,033 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,066 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,066 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,066 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,066 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,087 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,098 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,098 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,098 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,127 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,127 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,127 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,127 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,156 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,156 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,156 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,156 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,187 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,187 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,189 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,189 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,203 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,219 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,219 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,219 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,240 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,240 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,240 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,240 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,274 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,274 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,274 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,274 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,308 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,308 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,308 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,308 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,339 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,339 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,339 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,339 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,374 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,374 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,374 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,374 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,399 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,399 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,399 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,399 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,441 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,441 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,441 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,441 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,474 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,474 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,474 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,474 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,505 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,506 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,506 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,506 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,521 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,537 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,537 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,537 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,537 INFO    Thread-16 :8844 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\wandb-summary.json
+2024-08-08 02:34:17,561 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,561 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,561 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,561 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,593 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,593 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,593 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,593 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,623 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,623 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,623 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,623 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,653 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 02:34:17,663 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,663 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,663 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,663 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,699 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,699 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,699 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,699 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,729 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,729 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,729 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,729 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,759 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,769 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,769 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,769 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,800 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,800 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,800 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,800 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,830 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,830 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,830 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,830 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,858 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,858 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,858 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,858 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,898 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,898 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,898 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,898 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,929 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,929 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,929 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,929 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,959 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,959 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,959 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,959 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:17,984 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:17,984 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:17,984 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:17,984 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,025 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,025 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,025 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,025 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,055 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,055 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,055 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,055 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,088 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,088 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,088 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,088 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,114 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,114 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,114 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,114 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,146 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,146 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,146 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,154 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,184 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,184 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,184 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,184 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,215 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,215 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,215 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,215 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,241 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,241 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,241 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,241 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,274 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,274 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,274 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,282 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,311 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,311 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,311 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,311 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,342 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,342 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,342 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,342 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,374 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,374 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,374 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,374 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,407 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,407 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,407 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,407 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,437 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,437 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,437 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,437 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,468 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,473 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,473 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,473 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,502 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,502 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,502 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,502 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,528 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,528 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,528 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,528 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,538 INFO    Thread-16 :8844 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\wandb-summary.json
+2024-08-08 02:34:18,559 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,559 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,559 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,569 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,607 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,607 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,607 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,608 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,632 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,632 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,632 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,632 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,658 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 02:34:18,658 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,658 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,658 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,658 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,698 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,698 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,698 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,698 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,724 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,724 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,724 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,724 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,764 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,764 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,764 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,764 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,795 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,795 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,795 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,795 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,824 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,824 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,824 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,824 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,858 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,858 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,858 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,858 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,885 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,885 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,885 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,885 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,922 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,923 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,923 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,924 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,945 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,955 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,955 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,955 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:18,985 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:18,985 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:18,985 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:18,985 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:19,015 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:19,015 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:19,015 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:19,015 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:19,049 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:19,049 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:19,049 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:19,049 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:19,075 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:19,075 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:19,075 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:19,075 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:19,116 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:19,116 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:19,116 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:19,116 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:19,147 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:19,147 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:19,147 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:19,147 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:19,175 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:19,175 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:19,175 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:19,175 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:19,205 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:19,205 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:19,205 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:19,205 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:19,241 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:19,241 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:19,241 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:19,241 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:19,275 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:19,275 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:19,275 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:19,275 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:19,302 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:19,302 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:19,302 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:19,302 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:19,341 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-08 02:34:19,341 DEBUG   SenderThread:8844 [sender.py:send():379] send: history
+2024-08-08 02:34:19,341 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: summary_record
+2024-08-08 02:34:19,341 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: server_info
+2024-08-08 02:34:19,341 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:19,341 DEBUG   SenderThread:8844 [sender.py:send():379] send: telemetry
+2024-08-08 02:34:19,341 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: server_info
+2024-08-08 02:34:19,428 DEBUG   SenderThread:8844 [sender.py:send():379] send: exit
+2024-08-08 02:34:19,428 INFO    SenderThread:8844 [sender.py:send_exit():586] handling exit code: 0
+2024-08-08 02:34:19,428 INFO    SenderThread:8844 [sender.py:send_exit():588] handling runtime: 13
+2024-08-08 02:34:19,428 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:19,428 INFO    SenderThread:8844 [sender.py:send_exit():594] send defer
+2024-08-08 02:34:19,428 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 02:34:19,428 INFO    HandlerThread:8844 [handler.py:handle_request_defer():184] handle defer: 0
+2024-08-08 02:34:19,428 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: defer
+2024-08-08 02:34:19,428 INFO    SenderThread:8844 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-08-08 02:34:19,428 INFO    SenderThread:8844 [sender.py:transition_state():614] send defer: 1
+2024-08-08 02:34:19,428 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 02:34:19,428 INFO    HandlerThread:8844 [handler.py:handle_request_defer():184] handle defer: 1
+2024-08-08 02:34:19,428 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: defer
+2024-08-08 02:34:19,428 INFO    SenderThread:8844 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-08-08 02:34:19,428 INFO    SenderThread:8844 [sender.py:transition_state():614] send defer: 2
+2024-08-08 02:34:19,428 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 02:34:19,428 INFO    HandlerThread:8844 [handler.py:handle_request_defer():184] handle defer: 2
+2024-08-08 02:34:19,428 INFO    HandlerThread:8844 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-08 02:34:19,428 DEBUG   SystemMonitor:8844 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-08 02:34:19,428 DEBUG   SystemMonitor:8844 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-08 02:34:19,428 DEBUG   SystemMonitor:8844 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-08 02:34:19,428 INFO    HandlerThread:8844 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-08 02:34:19,428 INFO    HandlerThread:8844 [interfaces.py:finish():200] Joined disk monitor
+2024-08-08 02:34:19,543 INFO    Thread-16 :8844 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\wandb-summary.json
+2024-08-08 02:34:20,139 INFO    HandlerThread:8844 [interfaces.py:finish():200] Joined gpu monitor
+2024-08-08 02:34:20,139 INFO    HandlerThread:8844 [interfaces.py:finish():200] Joined memory monitor
+2024-08-08 02:34:20,139 INFO    HandlerThread:8844 [interfaces.py:finish():200] Joined network monitor
+2024-08-08 02:34:20,139 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: defer
+2024-08-08 02:34:20,139 INFO    SenderThread:8844 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-08-08 02:34:20,139 INFO    SenderThread:8844 [sender.py:transition_state():614] send defer: 3
+2024-08-08 02:34:20,139 DEBUG   SenderThread:8844 [sender.py:send():379] send: stats
+2024-08-08 02:34:20,139 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 02:34:20,139 INFO    HandlerThread:8844 [handler.py:handle_request_defer():184] handle defer: 3
+2024-08-08 02:34:20,139 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: defer
+2024-08-08 02:34:20,139 INFO    SenderThread:8844 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-08-08 02:34:20,139 INFO    SenderThread:8844 [sender.py:transition_state():614] send defer: 4
+2024-08-08 02:34:20,139 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 02:34:20,139 INFO    HandlerThread:8844 [handler.py:handle_request_defer():184] handle defer: 4
+2024-08-08 02:34:20,139 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: defer
+2024-08-08 02:34:20,139 INFO    SenderThread:8844 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-08-08 02:34:20,139 INFO    SenderThread:8844 [sender.py:transition_state():614] send defer: 5
+2024-08-08 02:34:20,139 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 02:34:20,139 INFO    HandlerThread:8844 [handler.py:handle_request_defer():184] handle defer: 5
+2024-08-08 02:34:20,139 DEBUG   SenderThread:8844 [sender.py:send():379] send: summary
+2024-08-08 02:34:20,139 INFO    SenderThread:8844 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-08 02:34:20,139 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: defer
+2024-08-08 02:34:20,139 INFO    SenderThread:8844 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-08-08 02:34:20,139 INFO    SenderThread:8844 [sender.py:transition_state():614] send defer: 6
+2024-08-08 02:34:20,146 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 02:34:20,146 INFO    HandlerThread:8844 [handler.py:handle_request_defer():184] handle defer: 6
+2024-08-08 02:34:20,146 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: defer
+2024-08-08 02:34:20,146 INFO    SenderThread:8844 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-08-08 02:34:20,147 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: status_report
+2024-08-08 02:34:20,247 INFO    SenderThread:8844 [sender.py:transition_state():614] send defer: 7
+2024-08-08 02:34:20,247 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 02:34:20,247 INFO    HandlerThread:8844 [handler.py:handle_request_defer():184] handle defer: 7
+2024-08-08 02:34:20,247 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: defer
+2024-08-08 02:34:20,247 INFO    SenderThread:8844 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-08-08 02:34:20,247 INFO    SenderThread:8844 [sender.py:transition_state():614] send defer: 8
+2024-08-08 02:34:20,247 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 02:34:20,247 INFO    HandlerThread:8844 [handler.py:handle_request_defer():184] handle defer: 8
+2024-08-08 02:34:20,247 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: defer
+2024-08-08 02:34:20,247 INFO    SenderThread:8844 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-08-08 02:34:20,247 INFO    SenderThread:8844 [sender.py:transition_state():614] send defer: 9
+2024-08-08 02:34:20,247 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 02:34:20,247 INFO    HandlerThread:8844 [handler.py:handle_request_defer():184] handle defer: 9
+2024-08-08 02:34:20,247 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: defer
+2024-08-08 02:34:20,247 INFO    SenderThread:8844 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-08-08 02:34:20,247 INFO    SenderThread:8844 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-08-08 02:34:20,438 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-08 02:34:20,546 INFO    SenderThread:8844 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\config.yaml
+2024-08-08 02:34:20,546 INFO    SenderThread:8844 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\wandb-summary.json
+2024-08-08 02:34:20,546 INFO    SenderThread:8844 [dir_watcher.py:finish():388] scan: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files
+2024-08-08 02:34:20,548 INFO    SenderThread:8844 [dir_watcher.py:finish():402] scan save: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\conda-environment.yaml conda-environment.yaml
+2024-08-08 02:34:20,548 INFO    SenderThread:8844 [dir_watcher.py:finish():402] scan save: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\config.yaml config.yaml
+2024-08-08 02:34:20,554 INFO    SenderThread:8844 [dir_watcher.py:finish():402] scan save: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\requirements.txt requirements.txt
+2024-08-08 02:34:20,554 INFO    SenderThread:8844 [dir_watcher.py:finish():402] scan save: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\wandb-metadata.json wandb-metadata.json
+2024-08-08 02:34:20,554 INFO    SenderThread:8844 [dir_watcher.py:finish():402] scan save: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\wandb-summary.json wandb-summary.json
+2024-08-08 02:34:20,554 INFO    SenderThread:8844 [sender.py:transition_state():614] send defer: 10
+2024-08-08 02:34:20,554 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: poll_exit
+2024-08-08 02:34:20,554 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 02:34:20,554 INFO    HandlerThread:8844 [handler.py:handle_request_defer():184] handle defer: 10
+2024-08-08 02:34:20,564 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: defer
+2024-08-08 02:34:20,564 INFO    SenderThread:8844 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-08-08 02:34:20,564 INFO    SenderThread:8844 [file_pusher.py:finish():169] shutting down file pusher
+2024-08-08 02:34:20,806 INFO    wandb-upload_0:8844 [upload_job.py:push():130] Uploaded file c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\conda-environment.yaml
+2024-08-08 02:34:21,005 INFO    wandb-upload_3:8844 [upload_job.py:push():130] Uploaded file c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\wandb-summary.json
+2024-08-08 02:34:21,008 INFO    wandb-upload_1:8844 [upload_job.py:push():130] Uploaded file c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\config.yaml
+2024-08-08 02:34:21,047 INFO    wandb-upload_2:8844 [upload_job.py:push():130] Uploaded file c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\files\requirements.txt
+2024-08-08 02:34:21,261 INFO    Thread-15 (_thread_body):8844 [sender.py:transition_state():614] send defer: 11
+2024-08-08 02:34:21,261 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 02:34:21,261 INFO    HandlerThread:8844 [handler.py:handle_request_defer():184] handle defer: 11
+2024-08-08 02:34:21,261 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: defer
+2024-08-08 02:34:21,261 INFO    SenderThread:8844 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-08-08 02:34:21,264 INFO    SenderThread:8844 [file_pusher.py:join():175] waiting for file pusher
+2024-08-08 02:34:21,264 INFO    SenderThread:8844 [sender.py:transition_state():614] send defer: 12
+2024-08-08 02:34:21,264 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 02:34:21,264 INFO    HandlerThread:8844 [handler.py:handle_request_defer():184] handle defer: 12
+2024-08-08 02:34:21,264 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: defer
+2024-08-08 02:34:21,264 INFO    SenderThread:8844 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-08-08 02:34:21,264 INFO    SenderThread:8844 [file_stream.py:finish():601] file stream finish called
+2024-08-08 02:34:21,438 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-08 02:34:22,530 INFO    SenderThread:8844 [file_stream.py:finish():605] file stream finish is done
+2024-08-08 02:34:22,530 INFO    SenderThread:8844 [sender.py:transition_state():614] send defer: 13
+2024-08-08 02:34:22,530 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: poll_exit
+2024-08-08 02:34:22,530 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 02:34:22,530 INFO    HandlerThread:8844 [handler.py:handle_request_defer():184] handle defer: 13
+2024-08-08 02:34:22,531 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: defer
+2024-08-08 02:34:22,531 INFO    SenderThread:8844 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-08-08 02:34:22,531 INFO    SenderThread:8844 [sender.py:transition_state():614] send defer: 14
+2024-08-08 02:34:22,531 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 02:34:22,531 INFO    HandlerThread:8844 [handler.py:handle_request_defer():184] handle defer: 14
+2024-08-08 02:34:22,531 DEBUG   SenderThread:8844 [sender.py:send():379] send: final
+2024-08-08 02:34:22,531 DEBUG   SenderThread:8844 [sender.py:send():379] send: footer
+2024-08-08 02:34:22,531 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: defer
+2024-08-08 02:34:22,531 INFO    SenderThread:8844 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-08-08 02:34:22,532 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-08 02:34:22,532 DEBUG   SenderThread:8844 [sender.py:send_request():406] send_request: poll_exit
+2024-08-08 02:34:22,533 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 02:34:22,533 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: get_summary
+2024-08-08 02:34:22,533 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: sampled_history
+2024-08-08 02:34:22,534 DEBUG   HandlerThread:8844 [handler.py:handle_request():158] handle_request: shutdown
+2024-08-08 02:34:22,534 INFO    HandlerThread:8844 [handler.py:finish():882] shutting down handler
+2024-08-08 02:34:23,533 INFO    WriterThread:8844 [datastore.py:close():296] close: c:\Documents\UWM\PSYCH755\final_project\wandb\run-20240808_023405-e8jefigp\run-e8jefigp.wandb
+2024-08-08 02:34:23,534 INFO    SenderThread:8844 [sender.py:finish():1615] shutting down sender
+2024-08-08 02:34:23,534 INFO    SenderThread:8844 [file_pusher.py:finish():169] shutting down file pusher
+2024-08-08 02:34:23,534 INFO    SenderThread:8844 [file_pusher.py:join():175] waiting for file pusher
